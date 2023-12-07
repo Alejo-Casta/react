@@ -1,7 +1,7 @@
 import { TwitterFollowCard } from './TwitterFollowCard'
 import './App.css'
 
-export function App() {
+export function App () {
   const users = [{
     name: 'Miguel Angel Duran',
     userName: 'midudev',
@@ -27,7 +27,8 @@ export function App() {
           <TwitterFollowCard
             key={userName}
             userName={userName}
-            initialIsFollowing={isFollowing}>
+            initialIsFollowing={isFollowing}
+          >
             {name}
           </TwitterFollowCard>
         ))

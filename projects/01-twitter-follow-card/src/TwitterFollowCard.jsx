@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export function TwitterFollowCard({ children = 'Unknown', userName = 'unknown', initialIsFollowing }) {
+export function TwitterFollowCard ({ children = 'Unknown', userName = 'unknown', initialIsFollowing }) {
   const [isFollowing, setIsFollowing] = useState(initialIsFollowing)
 
   const avatarUrl = `https://unavatar.io/twitter/${userName}`
@@ -16,15 +16,16 @@ export function TwitterFollowCard({ children = 'Unknown', userName = 'unknown', 
   }
 
   return (
-    <article className="tw-followCard">
-      <header className="tw-followCard-header">
+    <article className='tw-followCard'>
+      <header className='tw-followCard-header'>
         <img
-          className="tw-followCard-avatar"
+          className='tw-followCard-avatar'
           src={avatarUrl}
-          alt="avatar" />
+          alt='avatar'
+        />
         <div>
-          <strong className="tw-followCard-info">{children}</strong>
-          <span className="tw-followCard-infoUserName">@{userName}</span>
+          <strong className='tw-followCard-info'>{children}</strong>
+          <span className='tw-followCard-infoUserName'>@{userName}</span>
         </div>
       </header>
       <aside>
@@ -35,4 +36,4 @@ export function TwitterFollowCard({ children = 'Unknown', userName = 'unknown', 
       </aside>
     </article>
   )
-} 
+}
